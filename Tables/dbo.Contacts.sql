@@ -6,13 +6,11 @@ CREATE TABLE [dbo].[Contacts]
 [PhoneMobile] [nvarchar] (25) COLLATE Latin1_General_CI_AS NULL,
 [Address1] [nvarchar] (128) COLLATE Latin1_General_CI_AS NULL,
 [Address2] [nvarchar] (128) COLLATE Latin1_General_CI_AS NULL,
-[Address3] [nvarchar] (128) COLLATE Latin1_General_CI_AS NULL,
 [CountryCode] [nvarchar] (4) COLLATE Latin1_General_CI_AS NULL CONSTRAINT [DF__Contacts__Countr__117F9D94] DEFAULT (N'US'),
 [JoiningDate] [datetime] NULL CONSTRAINT [DF__Contacts__Joinin__1273C1CD] DEFAULT (getdate()),
 [ModifiedDate] [datetime] NULL,
 [Email] [nvarchar] (256) COLLATE Latin1_General_CI_AS NULL,
-[Photo] [image] NULL,
-[LinkedIn] [nvarchar] (128) COLLATE Latin1_General_CI_AS NULL
+[Photo] [image] NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Contacts] ADD CONSTRAINT [PK__Contacts__912F378B7C53D1A0] PRIMARY KEY CLUSTERED  ([ContactsID]) ON [PRIMARY]
